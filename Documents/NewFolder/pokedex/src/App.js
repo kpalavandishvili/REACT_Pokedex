@@ -2,6 +2,8 @@ import React from "react";
 import Logo from "./Logo";
 import BestPokemon from "./BestPokemon";
 import CaughtPokemon from "./CaughtPokemon";
+import PokemonMovesSelector from "./PokemonMovesSelector";
+import PokemonCity from "./PokemonCity";
 
 
 const App = () => {   // Create a function named App, which will be our component.
@@ -13,7 +15,8 @@ const App = () => {   // Create a function named App, which will be our componen
       <Logo appName="Pokedex" />
       <BestPokemon  abilities = {abilities} />
       <CaughtPokemon date = {date}/>
-
+      <PokemonMovesSelector />
+      <PokemonCity />
     </div>
   )
 }
