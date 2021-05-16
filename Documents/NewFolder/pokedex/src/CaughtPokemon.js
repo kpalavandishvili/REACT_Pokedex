@@ -12,16 +12,26 @@ const CaughtPokemon = () => {
       setPokemonNameInput(event.target.value)
     }
   }
-  // Empty the <input> after clicking on the button.
+  // const catchPokemon = () => {
+  //   setCaught(caught.concat(pokemonNameInput))?
+  //   setPokemonNameInput("") :
+  //   alert("Please fill the input...")
+  // } 
+  // condition ? outputIfTrue : outputIfFalse
   const catchPokemon = () => {
-    setCaught(caught.concat(pokemonNameInput));
-    setPokemonNameInput("");
-  }
+    if (pokemonNameInput) {
+      setCaught(caught.concat(pokemonNameInput));
+      setPokemonNameInput("");
+    } else {
+      // setInputState("invalid-input");
+      alert("Uh oh! Sorry, something went wrong with your request.");
+    }
+  };
   return (
     <div>
       <div>
-        <input type="text" value={pokemonNameInput} onChange={handleInputChange}></input>
-        <button onClick={catchPokemon}>Catch Pokemon</button>
+      <input type="text" value={pokemonNameInput} onChange={handleInputChange}></input>
+      <button onClick={catchPokemon}>Catch Pokemon</button>
       </div>
       {caught.map((item, index) => {
         return <li key={index}>{item}</li>
@@ -31,7 +41,7 @@ const CaughtPokemon = () => {
   )
 }
 
-export default CaughtPokemon;
+export default CaughtPokemon; 
 
 // Call the catchPokemon function
 // Update the caught variable in the state

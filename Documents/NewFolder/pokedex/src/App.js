@@ -5,7 +5,6 @@ import CaughtPokemon from "./CaughtPokemon";
 import PokemonMovesSelector from "./PokemonMovesSelector";
 import PokemonCity from "./PokemonCity";
 
-
 const App = () => {   // Create a function named App, which will be our component.
 
   const abilities = ['Anticipation', 'Adaptability', 'Run-Away'];  
